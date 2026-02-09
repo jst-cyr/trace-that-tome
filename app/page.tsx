@@ -105,9 +105,9 @@ export default function Home() {
           <div className="grid w-full max-w-3xl gap-6 sm:grid-cols-2">
           <Card className="border-primary/20 bg-card shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">Bookmark with App</CardTitle>
+              <CardTitle className="text-2xl">1 Bookmark with App</CardTitle>
               <CardDescription>
-                One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device~
+                One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device!
               </CardDescription>
             </CardHeader>
             <CardContent>
