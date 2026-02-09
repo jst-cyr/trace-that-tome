@@ -237,7 +237,7 @@ export default function Home() {
             this button would take you to checkout.
           </p>
           <Button asChild size="lg" className="mt-6">
-            <a href="mailto:order@tracethattome.example?subject=Order%20trace%20That%20Tome">
+            <a href="mailto:order@trace-that-tome.com?subject=Order%20Trace%20That%20Tome">
               Order now
             </a>
           </Button>
