@@ -105,9 +105,9 @@ export default function Home() {
           <div className="grid w-full max-w-3xl gap-6 sm:grid-cols-2">
           <Card className="border-primary/20 bg-card shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">1 bookmark</CardTitle>
+              <CardTitle className="text-2xl">Bookmark with App</CardTitle>
               <CardDescription>
-                One Trace That Tome bookmark and free app access.
+                One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device~
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -118,15 +118,15 @@ export default function Home() {
             </CardContent>
             <CardFooter className="flex justify-center pb-6">
               <Button asChild size="lg">
-                <a href="#order">Get 1 bookmark</a>
+                <a href="#order">Get Bookmark with App</a>
               </Button>
             </CardFooter>
           </Card>
           <Card className="border-primary/20 bg-card shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl">6 bookmarks</CardTitle>
+              <CardTitle className="text-2xl">6 Offline Bookmarks</CardTitle>
               <CardDescription>
-                Six Trace That Tome bookmarks and free app access. Save when you buy more.
+                Six Trace That Tome bookmarks with a remote tracker that works without an internet connection.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -137,7 +137,7 @@ export default function Home() {
             </CardContent>
             <CardFooter className="flex justify-center pb-6">
               <Button asChild size="lg">
-                <a href="#order">Get 6 bookmarks</a>
+                <a href="#order">Get 6 Offline Bookmarks</a>
               </Button>
             </CardFooter>
           </Card>
