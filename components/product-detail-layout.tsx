@@ -102,10 +102,6 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
           </ul>
         </div>
 
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          Free shipping on orders over $25
-        </p>
-
         {sibling ? (
           <section
             className="mt-12"

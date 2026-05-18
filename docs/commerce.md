@@ -18,7 +18,6 @@ Exactly **two** products. Canonical data lives in [`lib/products.ts`](../lib/pro
 
 ### Shared merchandising
 
-- Homepage and PDPs may show: **“Free shipping on orders over $25”**.
 - Offer presentation on homepage is **not duplicated in JSX** — use `ProductOfferCards` reading from `lib/products.ts`.
 
 ## User flows
@@ -73,9 +72,8 @@ Implemented by [`components/product-detail-layout.tsx`](../components/product-de
    - Label: **Theme**
 5. **Add to cart** — disabled button
 6. **What’s included** — bullet list from `product.features`
-7. Free shipping line
-8. **See also** — `RelatedProductCard` for sibling product (image, title, `shortDescription`, price, CTA to sibling PDP)
-9. **View all options** — `/#order`
+7. **See also** — `RelatedProductCard` for sibling product (image, title, `shortDescription`, price, CTA to sibling PDP)
+8. **View all options** — `/#order`
 
 ### Themes (skeleton)
 

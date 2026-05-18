@@ -118,9 +118,6 @@ export default function Home() {
             />
           </figure>
         </div>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm text-muted-foreground">
-          Free shipping on orders over $25
-        </p>
       </section>
 
       {/* Featured author */}
