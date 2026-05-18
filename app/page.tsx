@@ -63,7 +63,7 @@ export default function Home() {
           </Card>
           {/* Promo: right column on desktop; blue border, very light blue bg, headings blue, body black */}
           <aside
-            className="flex flex-col justify-between rounded-2xl border-2 border-primary bg-[#e8f1ff] p-6 shadow-lg sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:row-start-1 lg:min-h-0"
+            className="order-first flex flex-col justify-between rounded-2xl border-2 border-primary bg-[#e8f1ff] p-6 shadow-lg sm:col-span-2 lg:order-none lg:col-span-1 lg:row-span-2 lg:row-start-1 lg:min-h-0"
             aria-labelledby="promo-heading"
           >
             <div>
