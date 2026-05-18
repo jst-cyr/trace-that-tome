@@ -2,6 +2,8 @@
 
 A simple product campaign page for **Trace That Tome**—a bookmark with a built-in tracking tag so you can find your book when you misplace it. Built as a static site for a kid's school project.
 
+**Specifications (source of truth):** see [`docs/`](docs/README.md) and [`AGENTS.md`](AGENTS.md) for agents and contributors.
+
 ## Tech stack
 
 - **Next.js 16** (App Router) with **static export**
@@ -46,8 +48,9 @@ A simple product campaign page for **Trace That Tome**—a bookmark with a built
 
 ## Project structure
 
-- `app/` – Next.js App Router (layout, page, globals.css)
-- `components/ui/` – ShadCN components (Button, Card)
-- `lib/` – utilities (e.g. `cn` for class names)
+- `app/` – Next.js App Router (home, reviews, product pages)
+- `components/` – UI (shadcn) and product layouts
+- `lib/` – product catalog (`products.ts`), book reviews (`book-reviews.ts`), utilities
+- `docs/` – behavior specifications (spec-driven)
 
-No backend or real checkout; the “Order now” CTA uses a `mailto:` link for the school project.
+No backend or real checkout yet; product detail pages use a disabled “Add to cart” and homepage “Order now” scrolls to the offer section. See [docs/commerce.md](docs/commerce.md).
