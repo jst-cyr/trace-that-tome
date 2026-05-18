@@ -9,7 +9,6 @@ type ProductDetailLayoutProps = {
 
 export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
   const sibling = getSiblingProduct(product);
-  const singleVariant = product.variants.length === 1;
 
   return (
     <main className="min-h-screen px-6 py-12 md:py-16">
@@ -57,18 +56,17 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
 
             <div className="mt-8">
               <label
-                htmlFor="variant"
+                htmlFor="theme"
                 className="text-sm font-medium text-foreground"
               >
-                Option
+                Theme
               </label>
               <select
-                id="variant"
-                name="variant"
+                id="theme"
+                name="theme"
                 defaultValue={product.variants[0]?.id}
-                disabled={singleVariant}
-                className="mt-2 flex h-10 w-full max-w-sm rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-60"
-                aria-label="Product option"
+                className="mt-2 flex h-10 w-full max-w-sm rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                aria-label="Theme"
               >
                 {product.variants.map((variant) => (
                   <option key={variant.id} value={variant.id}>

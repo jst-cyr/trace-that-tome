@@ -3,6 +3,15 @@ export type ProductVariant = {
   label: string;
 };
 
+/** Bookmark themes (alphabetical by label). Shared by all PDPs. */
+export const productThemes: ProductVariant[] = [
+  { id: "assorted", label: "Assorted" },
+  { id: "butterfly-and-insects", label: "Butterfly and Insects" },
+  { id: "cute-animals", label: "Cute Animals" },
+  { id: "space", label: "Space" },
+  { id: "wild-animals", label: "Wild Animals" },
+];
+
 export type ProductId = "app-bookmark" | "offline-pack";
 
 export type Product = {
@@ -37,7 +46,7 @@ export const products: Product[] = [
       "Includes a free spare tracker you can swap in if needed",
       "No batteries to replace—the tracker lasts for years",
     ],
-    variants: [{ id: "standard", label: "Standard" }],
+    variants: productThemes,
     imageSrc: "/assets/blue-dragon-with-book.avif",
     imageAlt: "Trace That Tome bookmark with app tracking",
     metaDescription:
@@ -58,7 +67,7 @@ export const products: Product[] = [
       "Great value for families, classrooms, or avid readers",
       "No batteries to replace—the trackers last for years",
     ],
-    variants: [{ id: "6-pack", label: "6-pack" }],
+    variants: productThemes,
     imageSrc: "/assets/blue-dragon-with-book.avif",
     imageAlt: "Trace That Tome offline bookmark pack",
     metaDescription:

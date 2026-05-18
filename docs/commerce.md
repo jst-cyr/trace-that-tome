@@ -77,14 +77,19 @@ Implemented by [`components/product-detail-layout.tsx`](../components/product-de
 8. **See also** — link to sibling product (if exists)
 9. **View all options** — `/#order`
 
-### Variants (skeleton)
+### Themes (skeleton)
 
-| Product | Default variant id | Label |
-|---------|-------------------|-------|
-| app-bookmark | `standard` | Standard |
-| `offline-pack` | `6-pack` | 6-pack |
+Both products share the same theme options (alphabetical by label):
 
-Variant selection does **not** change price or enable checkout yet. Future spec should define `priceDelta` or SKU mapping before enabling the selector.
+| id | Label |
+|----|-------|
+| `assorted` | Assorted |
+| `butterfly-and-insects` | Butterfly and Insects |
+| `cute-animals` | Cute Animals |
+| `space` | Space |
+| `wild-animals` | Wild Animals |
+
+Default selection is the first theme (`assorted`). Theme selection does **not** change price or enable checkout yet. Future spec should define `priceDelta` or SKU mapping before checkout integration.
 
 ### Images
 

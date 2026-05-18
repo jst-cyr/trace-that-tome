@@ -32,7 +32,7 @@ Product {
 |-------|---------|
 | `title`, `shortDescription`, `priceDisplay`, `priceDetail` | Home cards, PDP header |
 | `features` | PDP “What’s included” only |
-| `variants` | PDP selector |
+| `variants` | PDP theme selector (see `productThemes`) |
 | `metaDescription` | Page `<meta description>` |
 | `ctaLabel` | Homepage card button text |
 | `imageSrc`, `imageAlt` | PDP image |
