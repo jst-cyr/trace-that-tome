@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { RelatedProductCard } from "@/components/related-product-card";
 import type { Product } from "@/lib/products";
 import { getSiblingProduct } from "@/lib/products";
 
@@ -106,15 +107,20 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
         </p>
 
         {sibling ? (
-          <p className="mt-6 text-center text-sm">
-            See also:{" "}
-            <Link
-              href={`/products/${sibling.slug}`}
-              className="font-medium text-primary underline-offset-4 hover:underline"
+          <section
+            className="mt-12"
+            aria-labelledby="see-also-heading"
+          >
+            <h2
+              id="see-also-heading"
+              className="text-center font-heading text-2xl font-semibold"
             >
-              {sibling.title}
-            </Link>
-          </p>
+              See also
+            </h2>
+            <div className="mt-6 flex justify-center px-2">
+              <RelatedProductCard product={sibling} />
+            </div>
+          </section>
         ) : null}
 
         <div className="mt-10 flex justify-center">

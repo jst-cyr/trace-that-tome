@@ -52,7 +52,7 @@ flowchart TD
 | Get 6 Offline Bookmarks | Offer card | `/products/offline-pack` | From `product.ctaLabel` |
 | Add to cart | PDP | — | **Disabled**; label “Add to cart” |
 | View all options | PDP | `/#order` | Return to homepage offer section |
-| See also | PDP | `/products/{sibling-slug}` | Other product title as link text |
+| See also | PDP | `/products/{sibling-slug}` | `RelatedProductCard`: image, title, description, price, `ctaLabel` button |
 
 **Do not** use `mailto:` for primary order CTAs unless this spec is updated.
 
@@ -74,7 +74,7 @@ Implemented by [`components/product-detail-layout.tsx`](../components/product-de
 5. **Add to cart** — disabled button
 6. **What’s included** — bullet list from `product.features`
 7. Free shipping line
-8. **See also** — link to sibling product (if exists)
+8. **See also** — `RelatedProductCard` for sibling product (image, title, `shortDescription`, price, CTA to sibling PDP)
 9. **View all options** — `/#order`
 
 ### Themes (skeleton)

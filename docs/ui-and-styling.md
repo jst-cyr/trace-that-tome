@@ -58,6 +58,7 @@ Standard Card composition: `CardHeader`, `CardTitle`, `CardDescription`, `CardCo
 | Component | Role |
 |-----------|------|
 | `ProductOfferCards` | Homepage two-product grid |
+| `RelatedProductCard` | PDP “See also” sibling product |
 | `ProductDetailLayout` | Shared PDP shell |
 
 ## Images
