@@ -103,7 +103,7 @@ export const bookReviews: BookReview[] = [
     title: "Mr. Wolf's Class",
     author: "Aron Nels Steinke",
     coverImage:
-      "https://covers.openlibrary.org/b/isbn/9781338045461-M.jpg",
+      "https://covers.openlibrary.org/b/isbn/9781338047691-M.jpg",
     coverAlt: "Cover of Mr. Wolf's Class by Aron Nels Steinke",
     quote: "This class gets an A.",
     sourceName: "Kirkus Reviews",
