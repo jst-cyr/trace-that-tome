@@ -86,3 +86,10 @@ body {
 .font-heading {
   font-family: var(--font-heading), ui-rounded, system-ui, sans-serif;
 }
+
+/* Featured author biography — change font-style, size, or color here */
+.author-bio {
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--foreground);
+}

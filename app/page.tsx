@@ -155,6 +155,107 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Featured author */}
+      <section className="border-b bg-muted/20 px-6 py-16 md:py-24">
+        <h2 className="font-heading text-center text-2xl font-semibold md:text-3xl">
+          Featured Author
+        </h2>
+        <p className="mx-auto mt-2 text-center text-muted-foreground">
+          This month&apos;s feature
+        </p>
+        <div
+          className="mx-auto mt-10 flex max-w-4xl flex-col gap-8 md:flex-row md:items-start md:gap-10"
+        >
+          <figure className="mx-auto shrink-0 md:mx-0">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Saadia_Faruqi_2022_Texas_Book_Festival.jpg/500px-Saadia_Faruqi_2022_Texas_Book_Festival.jpg"
+              alt="Saadia Faruqui at the Texas Book Festival"
+              className="h-auto w-56 rounded-xl border border-border object-cover shadow-md md:w-64"
+              width={500}
+              height={750}
+            />
+            <figcaption className="mt-2 max-w-64 text-center text-xs text-muted-foreground md:text-left">
+              Photo: Larry D. Moore,{" "}
+              <a
+                href="https://creativecommons.org/licenses/by/4.0/"
+                className="underline hover:text-foreground"
+                rel="license noreferrer"
+                target="_blank"
+              >
+                CC BY 4.0
+              </a>
+              , via Wikimedia Commons
+            </figcaption>
+          </figure>
+          <div className="min-w-0 flex-1">
+            <h3 className="font-heading text-xl font-semibold md:text-2xl">
+              Saadia Faruqi
+            </h3>
+            <p className="author-bio mt-4 text-base md:text-lg">
+              Saadia Faruqi grew up in Karachi, Pakistan, and now lives in
+              Houston, Texas, with her family. She writes books for kids about
+              Pakistani-American families, friendship, food, and finding where
+              you belong. Her Yasmin series follows a clever second-grader who
+              uses imagination to solve everyday problems.               Her novels A Thousand Questions, A Place at the Table, and Yusuf
+              Azeem Is Not a Hero explore unlikely friendships,
+              different cultures, and standing up for what is right. When she
+              is not writing, she helps people learn about one another and work
+              together peacefully.
+            </p>
+          </div>
+        </div>
+        <div className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Card className="overflow-hidden">
+            <div className="aspect-[2/3] w-full bg-muted">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9781684360222-M.jpg"
+                alt="Meet Yasmin! by Saadia Faruqui"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <CardHeader className="p-4">
+              <CardTitle className="text-lg">Meet Yasmin!</CardTitle>
+            </CardHeader>
+          </Card>
+          <Card className="overflow-hidden">
+            <div className="aspect-[2/3] w-full bg-muted">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9780062943200-M.jpg"
+                alt="A Thousand Questions by Saadia Faruqui"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <CardHeader className="p-4">
+              <CardTitle className="text-lg">A Thousand Questions</CardTitle>
+            </CardHeader>
+          </Card>
+          <Card className="overflow-hidden">
+            <div className="aspect-[2/3] w-full bg-muted">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9780358116684-M.jpg"
+                alt="A Place at the Table by Saadia Faruqui and Laura Shovan"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <CardHeader className="p-4">
+              <CardTitle className="text-lg">A Place at the Table</CardTitle>
+            </CardHeader>
+          </Card>
+          <Card className="overflow-hidden">
+            <div className="aspect-[2/3] w-full bg-muted">
+              <img
+                src="https://covers.openlibrary.org/b/isbn/9780062943255-M.jpg"
+                alt="Yusuf Azeem Is Not a Hero by Saadia Faruqui"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <CardHeader className="p-4">
+              <CardTitle className="text-lg">Yusuf Azeem Is Not a Hero</CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
+      </section>
+
       {/* Book recommendations */}
       <section className="px-6 py-16 md:py-24">
         <h2 className="font-heading text-center text-2xl font-semibold md:text-3xl">
