@@ -196,7 +196,8 @@ export default function Home() {
               Houston, Texas, with her family. She writes books for kids about
               Pakistani-American families, friendship, food, and finding where
               you belong. Her Yasmin series follows a clever second-grader who
-              uses imagination to solve everyday problems.               Her novels A Thousand Questions, A Place at the Table, and Yusuf
+              uses imagination to solve everyday problems. Her novels The
+              Partition Project, A Place at the Table, and Yusuf
               Azeem Is Not a Hero explore unlikely friendships,
               different cultures, and standing up for what is right. When she
               is not writing, she helps people learn about one another and work
@@ -220,13 +221,13 @@ export default function Home() {
           <Card className="overflow-hidden">
             <div className="aspect-[2/3] w-full bg-muted">
               <img
-                src="https://covers.openlibrary.org/b/isbn/9780062943200-M.jpg"
-                alt="A Thousand Questions by Saadia Faruqui"
+                src="https://covers.openlibrary.org/b/isbn/9780063115811-M.jpg"
+                alt="The Partition Project by Saadia Faruqui"
                 className="h-full w-full object-cover"
               />
             </div>
             <CardHeader className="p-4">
-              <CardTitle className="text-lg">A Thousand Questions</CardTitle>
+              <CardTitle className="text-lg">The Partition Project</CardTitle>
             </CardHeader>
           </Card>
           <Card className="overflow-hidden">
@@ -294,13 +295,13 @@ export default function Home() {
           <Card className="overflow-hidden">
             <div className="aspect-[2/3] w-full bg-muted">
               <img
-                src="https://covers.openlibrary.org/b/isbn/0062943200-M.jpg"
-                alt="A Thousand Questions by Saadia Faruqui"
+                src="https://covers.openlibrary.org/b/isbn/9780063115811-M.jpg"
+                alt="The Partition Project by Saadia Faruqui"
                 className="h-full w-full object-cover"
               />
             </div>
             <CardHeader className="p-4">
-              <CardTitle className="text-lg">A Thousand Questions</CardTitle>
+              <CardTitle className="text-lg">The Partition Project</CardTitle>
               <CardDescription>Saadia Faruqui</CardDescription>
             </CardHeader>
           </Card>
