@@ -58,7 +58,7 @@ export const products: Product[] = [
     slug: "offline-pack",
     title: "6 Offline Bookmarks",
     shortDescription:
-      "Six Trace That Tome bookmarks with a remote tracker that works without an internet connection.",
+      "Six Trace That Tome bookmarks with a remote tracker that works without an internet connection. The best deal is for six bookmarks with an offline tracker!",
     priceDisplay: "$36",
     priceDetail: "$6 per bookmark",
     features: [
@@ -71,7 +71,7 @@ export const products: Product[] = [
     imageSrc: "/assets/blue-dragon-with-book.avif",
     imageAlt: "Trace That Tome offline bookmark pack",
     metaDescription:
-      "Six Trace That Tome bookmarks with an offline remote tracker—no internet required.",
+      "Six Trace That Tome bookmarks with an offline remote tracker—no internet required. The best deal is for six bookmarks with an offline tracker!",
     ctaLabel: "Get 6 Offline Bookmarks",
   },
 ];
