@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ProductOfferCards } from "@/components/product-offer-cards";
 
 export default function Home() {
   return (
@@ -105,48 +104,12 @@ export default function Home() {
       </section>
 
       {/* Price / offer */}
-      <section className="border-y bg-muted/30 px-6 py-16 md:py-24">
+      <section
+        id="order"
+        className="scroll-mt-6 border-y bg-muted/30 px-6 py-16 md:py-24"
+      >
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-start md:justify-center md:gap-10">
-          <div className="grid w-full max-w-3xl gap-6 sm:grid-cols-2">
-          <Card className="border-primary/20 bg-card shadow-lg">
-            <CardHeader>
-              <CardTitle className="text-2xl">1 Bookmark with App</CardTitle>
-              <CardDescription>
-                One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device!
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-4xl font-bold">$12</p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                $12 per bookmark
-              </p>
-            </CardContent>
-            <CardFooter className="flex justify-center pb-6">
-              <Button asChild size="lg">
-                <a href="#order">Get Bookmark with App</a>
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card className="border-primary/20 bg-card shadow-lg">
-            <CardHeader>
-              <CardTitle className="text-2xl">6 Offline Bookmarks</CardTitle>
-              <CardDescription>
-                Six Trace That Tome bookmarks with a remote tracker that works without an internet connection.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-4xl font-bold">$36</p>
-              <p className="mt-2 text-sm text-muted-foreground">
-                $6 per bookmark
-              </p>
-            </CardContent>
-            <CardFooter className="flex justify-center pb-6">
-              <Button asChild size="lg">
-                <a href="#order">Get 6 Offline Bookmarks</a>
-              </Button>
-            </CardFooter>
-          </Card>
-          </div>
+          <ProductOfferCards />
           <figure className="flex shrink-0 flex-col items-center md:mt-4">
             <img
               src="/assets/blue-dragon-with-book.avif"
@@ -332,7 +295,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section id="order" className="relative min-h-[420px] md:min-h-[560px]">
+      <section className="relative min-h-[420px] md:min-h-[560px]">
         <img
           src="/assets/cta-woman-books.jpg"
           alt=""
@@ -345,13 +308,11 @@ export default function Home() {
             Ready to never lose your book again?
           </h2>
           <p className="mx-auto mt-3 max-w-md [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-            For this school project, ordering is simulated. In a real campaign,
-            this button would take you to checkout.
+            For this school project, ordering is simulated. Choose a bookmark
+            option below to learn more.
           </p>
           <Button asChild size="lg" className="mt-6">
-            <a href="mailto:order@trace-that-tome.com?subject=Order%20Trace%20That%20Tome">
-              Order now
-            </a>
+            <a href="#order">Order now</a>
           </Button>
         </div>
       </section>
