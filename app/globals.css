@@ -93,3 +93,8 @@ body {
   line-height: 1.65;
   color: var(--foreground);
 }
+
+/* Book review excerpts on /reviews — adjust size or style here */
+.review-quote {
+  line-height: 1.7;
+}

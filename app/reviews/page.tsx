@@ -52,7 +52,7 @@ export default function ReviewsPage() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   by {book.author}
                 </p>
-                <blockquote className="mt-4 border-l-4 border-primary/40 pl-4 text-base italic leading-relaxed text-foreground/90">
+                <blockquote className="review-quote mt-4 border-l-4 border-primary/40 pl-4 text-base leading-relaxed text-foreground/90">
                   &ldquo;{book.quote}&rdquo;
                 </blockquote>
                 <p className="mt-3 text-sm text-muted-foreground">
