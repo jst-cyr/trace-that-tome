@@ -76,6 +76,13 @@ export default function Home() {
               <p className="mt-3 text-sm text-black">
                 One winner drawn each month—no purchase necessary. Enter for a chance to win a limited-edition Trace That Tome bookmark.
               </p>
+              <p className="mt-3 text-sm text-black">
+                You will need to provide your email address and mailing address. If you win, it will be shipped directly to your house!
+              </p>
+              <p className="mt-3 text-xs text-black italic">
+                Open to legal residents of Canada only. If selected, the prize will be shipped to a Canadian
+                mailing address only; prizes cannot be sent outside Canada.
+              </p>
             </div>
             <div className="mt-6">
               <Button asChild>
@@ -97,6 +104,7 @@ export default function Home() {
               <CardDescription>
                 Keep your place and never lose your book. Great for school,
                 travel, and bedtime reading.
+                If you have young kids, you absolutely need Trace that Tome because they can find the most unusual places to put books sometimes!!!
               </CardDescription>
             </CardHeader>
           </Card>
