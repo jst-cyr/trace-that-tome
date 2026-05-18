@@ -16,16 +16,21 @@ export default function Home() {
         <img
           src="/assets/hero-children-reading.jpg"
           alt="Children smiling while reading a book"
-          className="h-[320px] w-full object-cover md:h-[420px]"
+          className="h-[400px] w-full object-cover md:h-[480px] lg:h-[520px]"
         />
         <div className="absolute inset-0 bg-black/45" aria-hidden />
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 py-10 text-center text-white">
           <h1 className="font-heading text-4xl font-bold tracking-tight drop-shadow-md md:text-5xl lg:text-6xl">
-            Put your trust in Trace that Tome for those treasured books that roam.
+            Never lose your book again
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg drop-shadow-md [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
             Trace That Tome is a bookmark with a built-in tracking tag. When you
             misplace your book, find it in seconds with the free app.
+          </p>
+          <p className="hero-tagline mx-auto mt-6 max-w-xl">
+            Put your trust in Trace that Tome
+            <br />
+            For those treasured books that roam
           </p>
           <Button asChild size="lg" className="mt-8">
             <a href="#order">Order now</a>
