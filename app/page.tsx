@@ -53,7 +53,7 @@ export default function Home() {
               <CardTitle>Tracker</CardTitle>
               <CardDescription>
                 A small, durable tracker is attached to your custom bookmark. No batteries to
-                replace—it lasts for years.
+                replace—it lasts for years. It also comes with a free tracker too! This free tracker can replace the other one if needed.
               </CardDescription>
             </CardHeader>
           </Card>
