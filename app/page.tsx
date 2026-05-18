@@ -21,7 +21,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/45" aria-hidden />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center text-white">
           <h1 className="font-heading text-4xl font-bold tracking-tight drop-shadow-md md:text-5xl lg:text-6xl">
-            Never lose your book again
+            Put your trust in Trace that Tome for those treasured books that roam.
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg drop-shadow-md [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
             Trace That Tome is a bookmark with a built-in tracking tag. When you
