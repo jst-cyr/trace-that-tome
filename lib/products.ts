@@ -37,7 +37,7 @@ export const products: Product[] = [
     slug: "app-bookmark",
     title: "1 Bookmark with App",
     shortDescription:
-      "One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device!",
+      "One Trace That Tome bookmark with free app access. Find your book anywhere from your mobile device! It's like a treasure hunt with a map, and your lost book is certainly an amazing treasure!",
     priceDisplay: "$12",
     priceDetail: "$12 per bookmark",
     features: [
@@ -50,7 +50,7 @@ export const products: Product[] = [
     imageSrc: "/assets/blue-dragon-with-book.avif",
     imageAlt: "Trace That Tome bookmark with app tracking",
     metaDescription:
-      "One Trace That Tome bookmark with free app access. Find your misplaced book from your phone.",
+      "One Trace That Tome bookmark with free app access. Find your misplaced book from your phone. It's like a treasure hunt with a map, and your lost book is certainly an amazing treasure!",
     ctaLabel: "Get Bookmark with App",
   },
   {
