@@ -319,6 +319,11 @@ export default function Home() {
             </CardHeader>
           </Card>
         </div>
+        <div className="mt-12 flex justify-center">
+          <Button asChild size="lg">
+            <a href="/reviews">Read reviews on these and other great books</a>
+          </Button>
+        </div>
       </section>
 
       {/* Final CTA */}
