@@ -8,12 +8,14 @@ Structured content lives in `lib/` as TypeScript modules. **Pages and components
 
 ```ts
 ProductVariant { id, label }
+ProductImage { src, alt }
 ProductId = "app-bookmark" | "offline-pack"
 Product {
   id, slug, title, shortDescription,
   priceDisplay, priceDetail?,
   features[], variants[],
   imageSrc?, imageAlt,
+  galleryImages[],
   metaDescription, ctaLabel
 }
 ```
@@ -35,7 +37,8 @@ Product {
 | `variants` | PDP theme selector (see `productThemes`) |
 | `metaDescription` | Page `<meta description>` |
 | `ctaLabel` | Homepage card button text |
-| `imageSrc`, `imageAlt` | PDP image |
+| `imageSrc`, `imageAlt` | Default **hero** image (See also, any single-image surface); must match `galleryImages[0]` |
+| `galleryImages` | PDP gallery only; ordered hero → front → back → packaging under `/assets/products/{slug}/` |
 | `slug` | URL segment; must match `app/products/<slug>/` |
 
 ### Editing products

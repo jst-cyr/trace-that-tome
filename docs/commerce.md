@@ -91,7 +91,16 @@ Default selection is the first theme (`assorted`). Theme selection does **not** 
 
 ### Images
 
-`product.imageSrc` and `product.imageAlt` drive the hero image. If `imageSrc` is omitted, show a dashed placeholder (“Product image coming soon”).
+Product photos live under `public/assets/products/{slug}/` as `hero.jpg`, `front.jpg`, `back.jpg`, and `packaging.jpg`.
+
+| Field | Use |
+|-------|-----|
+| `imageSrc`, `imageAlt` | **Hero** only—See also card and any place that shows one product image. Path: `/assets/products/{slug}/hero.jpg`. |
+| `galleryImages` | PDP **image gallery** (Amazon-style): large main image + clickable thumbnails. First entry must match hero (`imageSrc` / `imageAlt`). Order: hero → front → back → packaging. |
+
+**PDP gallery behavior:** One large main image; a strip of small thumbnails (vertical column left of main on `md+`, horizontal row below main on small screens). Clicking a thumbnail updates the main image and highlights the active thumb. Theme selection does **not** change images.
+
+If `imageSrc` is omitted or `galleryImages` is empty, show a dashed placeholder (“Product image coming soon”).
 
 ## Homepage offer cards
 

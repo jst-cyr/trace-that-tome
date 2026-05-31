@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ProductImageGallery } from "@/components/product-image-gallery";
 import { RelatedProductCard } from "@/components/related-product-card";
 import type { Product } from "@/lib/products";
 import { getSiblingProduct } from "@/lib/products";
@@ -24,22 +25,9 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:items-start">
-          <figure className="flex flex-col items-center rounded-2xl border bg-muted/30 p-8">
-            {product.imageSrc ? (
-              <img
-                src={product.imageSrc}
-                alt={product.imageAlt}
-                className="h-auto max-h-80 w-full max-w-xs object-contain"
-              />
-            ) : (
-              <div
-                className="flex aspect-square w-full max-w-xs items-center justify-center rounded-xl border border-dashed border-border bg-muted text-sm text-muted-foreground"
-                aria-hidden
-              >
-                Product image coming soon
-              </div>
-            )}
-          </figure>
+          <div className="flex flex-col items-center rounded-2xl border bg-muted/30 p-6 md:p-8">
+            <ProductImageGallery images={product.galleryImages} />
+          </div>
 
           <div className="min-w-0">
             <h1 className="font-heading text-3xl font-bold md:text-4xl">

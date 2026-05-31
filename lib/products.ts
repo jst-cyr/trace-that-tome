@@ -3,6 +3,11 @@ export type ProductVariant = {
   label: string;
 };
 
+export type ProductImage = {
+  src: string;
+  alt: string;
+};
+
 /** Bookmark themes (alphabetical by label). Shared by all PDPs. */
 export const productThemes: ProductVariant[] = [
   { id: "assorted", label: "Assorted" },
@@ -25,11 +30,44 @@ export type Product = {
   variants: ProductVariant[];
   imageSrc?: string;
   imageAlt: string;
+  galleryImages: ProductImage[];
   /** Short line for page metadata */
   metaDescription: string;
   /** Label for the primary CTA on the homepage offer card */
   ctaLabel: string;
 };
+
+function productGallery(
+  slug: string,
+  alts: {
+    hero: string;
+    front: string;
+    back: string;
+    packaging: string;
+  }
+): ProductImage[] {
+  const base = `/assets/products/${slug}`;
+  return [
+    { src: `${base}/hero.jpg`, alt: alts.hero },
+    { src: `${base}/front.jpg`, alt: alts.front },
+    { src: `${base}/back.jpg`, alt: alts.back },
+    { src: `${base}/packaging.jpg`, alt: alts.packaging },
+  ];
+}
+
+const appBookmarkGallery = productGallery("app-bookmark", {
+  hero: "Trace That Tome app bookmark with tracking tag",
+  front: "Trace That Tome app bookmark, front view",
+  back: "Trace That Tome app bookmark, back view",
+  packaging: "Trace That Tome app bookmark in packaging",
+});
+
+const offlinePackGallery = productGallery("offline-pack", {
+  hero: "Trace That Tome six-bookmark offline pack with remote tracker",
+  front: "Trace That Tome offline bookmark pack, front view",
+  back: "Trace That Tome offline bookmark pack, back view",
+  packaging: "Trace That Tome offline bookmark pack in packaging",
+});
 
 export const products: Product[] = [
   {
@@ -47,8 +85,9 @@ export const products: Product[] = [
       "No batteries to replace—the tracker lasts for years",
     ],
     variants: productThemes,
-    imageSrc: "/assets/blue-dragon-with-book.avif",
-    imageAlt: "Trace That Tome bookmark with app tracking",
+    imageSrc: appBookmarkGallery[0].src,
+    imageAlt: appBookmarkGallery[0].alt,
+    galleryImages: appBookmarkGallery,
     metaDescription:
       "One Trace That Tome bookmark with free app access. Find your misplaced book from your phone. It's like a treasure hunt with a map, and your lost book is certainly an amazing treasure!",
     ctaLabel: "Get Bookmark with App",
@@ -68,8 +107,9 @@ export const products: Product[] = [
       "No batteries to replace—the trackers last for years",
     ],
     variants: productThemes,
-    imageSrc: "/assets/blue-dragon-with-book.avif",
-    imageAlt: "Trace That Tome offline bookmark pack",
+    imageSrc: offlinePackGallery[0].src,
+    imageAlt: offlinePackGallery[0].alt,
+    galleryImages: offlinePackGallery,
     metaDescription:
       "Six Trace That Tome bookmarks with an offline remote tracker—no internet required. The best deal is for six bookmarks with an offline tracker!",
     ctaLabel: "Get 6 Offline Bookmarks",

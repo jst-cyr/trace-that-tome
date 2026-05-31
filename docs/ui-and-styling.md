@@ -58,14 +58,15 @@ Standard Card composition: `CardHeader`, `CardTitle`, `CardDescription`, `CardCo
 | Component | Role |
 |-----------|------|
 | `ProductOfferCards` | Homepage two-product grid |
-| `RelatedProductCard` | PDP “See also” sibling product |
+| `ProductImageGallery` | PDP Amazon-style gallery: main image + clickable thumbnails (client) |
+| `RelatedProductCard` | PDP “See also” sibling product (hero via `imageSrc`) |
 | `ProductDetailLayout` | Shared PDP shell |
 
 ## Images
 
 - Prefer `alt` text on all meaningful images.
 - Decorative CTA backgrounds: `aria-hidden` on image when alt is empty.
-- Product PDP: respect `product.imageAlt`.
+- Product PDP: main gallery uses per-image `alt` from `galleryImages`; See also uses `product.imageAlt` (hero).
 
 ## Accessibility
 
