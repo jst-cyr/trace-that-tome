@@ -77,7 +77,7 @@ Append to `bookReviews` array with a unique `id`. No route changes required.
 
 The following remain inline in `app/page.tsx` until extracted:
 
-- “Why Trace That Tome?” info cards
+- “Why Trace-That-Tome?” info cards
 - Featured author bio and book grid
 - “Try These Great Books” grid
 - Promo aside (“Win a free bookmark!” — CTA still placeholder `#`)

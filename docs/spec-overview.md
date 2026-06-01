@@ -2,7 +2,7 @@
 
 ## What this application is
 
-**Trace That Tome** is a marketing and light-commerce campaign site for a school project product: a bookmark with a built-in tracking tag. Visitors learn how the product works, see book-related content (featured author, recommendations, reviews), and can browse two purchase options before a future real checkout flow.
+**Trace-That-Tome** is a marketing and light-commerce campaign site for a school project product: a bookmark with a built-in tracking tag. Visitors learn how the product works, see book-related content (featured author, recommendations, reviews), and can browse two purchase options before a future real checkout flow.
 
 The site is intentionally **static**: no server runtime, no database, no payment processor in the current implementation.
 

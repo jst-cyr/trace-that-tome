@@ -1,6 +1,6 @@
-# Trace That Tome — documentation index
+# Trace-That-Tome — documentation index
 
-Specifications for the Trace That Tome marketing site. **Agents and contributors should treat these documents as the authoritative description of intended behavior.**
+Specifications for the Trace-That-Tome marketing site. **Agents and contributors should treat these documents as the authoritative description of intended behavior.**
 
 ## Documents
 

@@ -16,13 +16,13 @@ There is **no** dynamic `[slug]` product route. New products require a new folde
 ### Secondary pages (reviews, PDP)
 
 - `<main className="min-h-screen …">` with horizontal padding.
-- Top: **“← Back to Trace That Tome”** linking to `/`.
+- Top: **“← Back to Trace-That-Tome”** linking to `/`.
 - Page title with `font-heading`.
 - Footer or inline link back home / to related content.
 
 ### Metadata
 
-Each page should export `metadata` (Next.js `Metadata` type) with a title suffix `– Trace That Tome` where appropriate. Product pages derive title and description from `lib/products.ts`.
+Each page should export `metadata` (Next.js `Metadata` type) with a title suffix `– Trace-That-Tome` where appropriate. Product pages derive title and description from `lib/products.ts`.
 
 ## Homepage (`app/page.tsx`)
 
@@ -31,7 +31,7 @@ Sections in document order:
 | Section | Purpose | Notable behavior |
 |---------|---------|------------------|
 | Hero | Value prop + primary CTA | “Order now” → `#order` |
-| Why Trace That Tome? | Info cards + promo aside | Static copy in JSX |
+| Why Trace-That-Tome? | Info cards + promo aside | Static copy in JSX |
 | **Price / offer** | Two purchase options with hero image per card | **`id="order"`**, `scroll-mt-6`; uses `ProductOfferCards` |
 | Featured Author | Saadia Faruqui spotlight + book covers | External cover URLs |
 | Try These Great Books | Recommendations grid | CTA → `/reviews` |

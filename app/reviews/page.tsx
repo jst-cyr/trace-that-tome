@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { bookReviews } from "@/lib/book-reviews";
 
 export const metadata: Metadata = {
-  title: "Book Reviews – Trace That Tome",
+  title: "Book Reviews – Trace-That-Tome",
   description:
-    "Read what reviewers say about books we recommend on Trace That Tome.",
+    "Read what reviewers say about books we recommend on Trace-That-Tome.",
 };
 
 export default function ReviewsPage() {
@@ -18,7 +18,7 @@ export default function ReviewsPage() {
             href="/"
             className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
           >
-            ← Back to Trace That Tome
+            ← Back to Trace-That-Tome
           </Link>
         </p>
         <h1 className="font-heading mt-6 text-center text-3xl font-bold md:text-4xl">

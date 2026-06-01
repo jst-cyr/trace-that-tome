@@ -1,6 +1,6 @@
-# Trace That Tome
+# Trace-That-Tome
 
-A simple product campaign page for **Trace That Tome**—a bookmark with a built-in tracking tag so you can find your book when you misplace it. Built as a static site for a kid's school project.
+A simple product campaign page for **Trace-That-Tome**—a bookmark with a built-in tracking tag so you can find your book when you misplace it. Built as a static site for a kid's school project.
 
 **Specifications (source of truth):** see [`docs/`](docs/README.md) and [`AGENTS.md`](AGENTS.md) for agents and contributors.
 

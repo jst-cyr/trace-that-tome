@@ -10,7 +10,7 @@ const fredoka = Fredoka({
 });
 
 export const metadata: Metadata = {
-  title: "Trace That Tome – Never lose your book again",
+  title: "Trace-That-Tome – Never lose your book again",
   description:
     "A bookmark with a tracking tag so you can find your book when you misplace it.",
   icons: {

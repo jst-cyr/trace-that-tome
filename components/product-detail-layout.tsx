@@ -20,7 +20,7 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
             href="/"
             className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
           >
-            ← Back to Trace That Tome
+            ← Back to Trace-That-Tome
           </Link>
         </p>
 

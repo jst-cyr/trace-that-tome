@@ -1,4 +1,4 @@
-# Agent guide — Trace That Tome
+# Agent guide — Trace-That-Tome
 
 This repository uses a **spec-driven** workflow. **`docs/` is the source of truth** for how the application should behave. When implementing or changing features, read the relevant spec first; when behavior changes, update the spec **before or together with** code—not after as an afterthought.
 

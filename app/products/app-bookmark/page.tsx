@@ -7,8 +7,8 @@ const product = getProductBySlug("app-bookmark");
 
 export const metadata: Metadata = {
   title: product
-    ? `${product.title} – Trace That Tome`
-    : "Product – Trace That Tome",
+    ? `${product.title} – Trace-That-Tome`
+    : "Product – Trace-That-Tome",
   description: product?.metaDescription,
 };
 

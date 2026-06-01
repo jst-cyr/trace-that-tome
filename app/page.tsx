@@ -23,11 +23,11 @@ export default function Home() {
             Never lose your book again
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg drop-shadow-md [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-            Trace That Tome is a bookmark with a built-in tracking tag. When you
+            Trace-That-Tome is a bookmark with a built-in tracking tag. When you
             misplace your book, find it in seconds with the free app.
           </p>
           <p className="hero-tagline mx-auto mt-6 max-w-xl">
-            Put your trust in Trace that Tome
+            Put your trust in Trace-That-Tome
             <br />
             For those treasured books that roam
           </p>
@@ -40,7 +40,7 @@ export default function Home() {
       {/* Info cards + promo */}
       <section className="px-6 py-16 md:py-24">
         <h2 className="mb-10 font-heading text-center text-2xl font-semibold md:text-3xl">
-          Why Trace That Tome?
+          Why Trace-That-Tome?
         </h2>
         <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Card>
@@ -74,7 +74,7 @@ export default function Home() {
                 Win a free bookmark!
               </h3>
               <p className="mt-3 text-sm text-black">
-                One winner drawn each month—no purchase necessary. Enter for a chance to win a limited-edition Trace That Tome bookmark.
+                One winner drawn each month—no purchase necessary. Enter for a chance to win a limited-edition Trace-That-Tome bookmark.
               </p>
               <p className="mt-3 text-sm text-black">
                 You will need to provide your email address and mailing address. If you win, it will be shipped directly to your house!
@@ -94,7 +94,7 @@ export default function Home() {
             <CardHeader>
               <CardTitle>Easy to use</CardTitle>
               <CardDescription>
-                Open the app, tap Trace That Tome, and follow the sound or map. It's like a treasure hunt for your book!
+                Open the app, tap Trace-That-Tome, and follow the sound or map. It's like a treasure hunt for your book!
               </CardDescription>
             </CardHeader>
           </Card>
@@ -104,7 +104,7 @@ export default function Home() {
               <CardDescription>
                 Keep your place and never lose your book. Great for school,
                 travel, and bedtime reading.
-                If you have young kids, you absolutely need Trace that Tome because they can find the most unusual places to put books sometimes!!!
+                If you have young kids, you absolutely need Trace-That-Tome because they can find the most unusual places to put books sometimes!!!
               </CardDescription>
             </CardHeader>
           </Card>
