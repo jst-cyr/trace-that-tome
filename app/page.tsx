@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ProductOfferCards } from "@/components/product-offer-cards";
+import { YouTubeEmbed } from "@/components/youtube-embed";
 
 export default function Home() {
   return (
@@ -35,6 +36,32 @@ export default function Home() {
             <a href="#order">Order now</a>
           </Button>
         </div>
+      </section>
+
+      {/* Video promo */}
+      <section className="border-b px-6 py-16 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-heading text-center text-2xl font-semibold md:text-3xl">
+            Learn About Trace-That-Tome
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+            Watch to learn how our tracker and app help you find misplaced books fast.
+          </p>
+          <div className="mx-auto mt-10 max-w-4xl">
+            <YouTubeEmbed
+              videoUrl="https://www.youtube.com/watch?v=3q33r-hgPeg"
+              title="Trace-That-Tome promo video"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Price / offer */}
+      <section
+        id="order"
+        className="scroll-mt-6 border-y bg-muted/30 px-6 py-16 md:py-24"
+      >
+        <ProductOfferCards />
       </section>
 
       {/* Info cards + promo */}
@@ -109,14 +136,6 @@ export default function Home() {
             </CardHeader>
           </Card>
         </div>
-      </section>
-
-      {/* Price / offer */}
-      <section
-        id="order"
-        className="scroll-mt-6 border-y bg-muted/30 px-6 py-16 md:py-24"
-      >
-        <ProductOfferCards />
       </section>
 
       {/* Featured author */}
