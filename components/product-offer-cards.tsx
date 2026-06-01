@@ -18,17 +18,17 @@ export function ProductOfferCards() {
           key={product.id}
           className="overflow-hidden border-primary/20 bg-card shadow-lg"
         >
-          <div className="flex items-stretch">
-            <figure className="w-1/2 shrink-0 self-stretch overflow-hidden border-r">
+          <div className="grid grid-cols-2 items-stretch">
+            <figure className="relative min-h-[17rem] overflow-hidden border-r">
               {product.imageSrc ? (
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
-                  className="block size-full min-h-full object-cover object-center"
+                  className="absolute inset-0 size-full object-cover object-center"
                 />
               ) : (
                 <div
-                  className="flex min-h-[12rem] size-full items-center justify-center bg-muted text-center text-[10px] text-muted-foreground"
+                  className="absolute inset-0 flex items-center justify-center bg-muted text-center text-[10px] text-muted-foreground"
                   aria-hidden
                 >
                   Image coming soon
@@ -36,7 +36,7 @@ export function ProductOfferCards() {
               )}
             </figure>
 
-            <div className="flex min-w-0 flex-1 flex-col">
+            <div className="flex min-w-0 flex-col">
               <CardHeader className="space-y-1 p-4 pb-2">
                 <CardTitle className="text-xl leading-tight">
                   {product.title}
