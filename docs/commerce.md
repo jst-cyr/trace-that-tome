@@ -106,7 +106,9 @@ If `imageSrc` is omitted or `galleryImages` is empty, show a dashed placeholder 
 
 [`components/product-offer-cards.tsx`](../components/product-offer-cards.tsx) maps `products` from `lib/products.ts` to two `Card` components with links to `/products/{slug}`.
 
-**Rule:** Do not hardcode prices or product titles on the homepage offer section; change `lib/products.ts` instead.
+Each card shows the product **hero** (`imageSrc` / `imageAlt`) on the **left** (half card width, `object-cover`, edge-to-edge) and copy (title, description, price, CTA) on the **right**. No separate mascot beside the cards in the order section.
+
+**Rule:** Do not hardcode prices, product titles, or hero image paths on the homepage offer section; change `lib/products.ts` instead.
 
 ## Adding a third product (future)
 

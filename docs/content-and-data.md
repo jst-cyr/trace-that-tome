@@ -37,7 +37,7 @@ Product {
 | `variants` | PDP theme selector (see `productThemes`) |
 | `metaDescription` | Page `<meta description>` |
 | `ctaLabel` | Homepage card button text |
-| `imageSrc`, `imageAlt` | Default **hero** image (See also, any single-image surface); must match `galleryImages[0]` |
+| `imageSrc`, `imageAlt` | Default **hero** image (homepage offer cards, See also, any single-image surface); must match `galleryImages[0]` |
 | `galleryImages` | PDP gallery only; explicit list per product under `/assets/products/{slug}/`. First entry must be `hero.jpg` and match `imageSrc` / `imageAlt`. Other filenames vary by product. |
 | `slug` | URL segment; must match `app/products/<slug>/` |
 

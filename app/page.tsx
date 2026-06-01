@@ -116,16 +116,7 @@ export default function Home() {
         id="order"
         className="scroll-mt-6 border-y bg-muted/30 px-6 py-16 md:py-24"
       >
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 md:flex-row md:items-start md:justify-center md:gap-10">
-          <ProductOfferCards />
-          <figure className="flex shrink-0 flex-col items-center md:mt-4">
-            <img
-              src="/assets/blue-dragon-with-book.avif"
-              alt="Cute blue dragon mascot reading a book"
-              className="h-auto w-40 rounded-lg object-contain drop-shadow-md md:w-48 lg:w-56"
-            />
-          </figure>
-        </div>
+        <ProductOfferCards />
       </section>
 
       {/* Featured author */}

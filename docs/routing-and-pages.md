@@ -32,7 +32,7 @@ Sections in document order:
 |---------|---------|------------------|
 | Hero | Value prop + primary CTA | “Order now” → `#order` |
 | Why Trace That Tome? | Info cards + promo aside | Static copy in JSX |
-| **Price / offer** | Two purchase options | **`id="order"`**, `scroll-mt-6`; uses `ProductOfferCards` |
+| **Price / offer** | Two purchase options with hero image per card | **`id="order"`**, `scroll-mt-6`; uses `ProductOfferCards` |
 | Featured Author | Saadia Faruqui spotlight + book covers | External cover URLs |
 | Try These Great Books | Recommendations grid | CTA → `/reviews` |
 | Final CTA | Closing message | “Order now” → `#order` (not mailto) |
