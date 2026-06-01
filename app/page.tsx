@@ -59,9 +59,15 @@ export default function Home() {
       {/* Price / offer */}
       <section
         id="order"
-        className="scroll-mt-6 border-y bg-muted/30 px-6 py-16 md:py-24"
+        className="relative scroll-mt-6 overflow-hidden border-y bg-muted px-6 py-16 md:py-24"
       >
-        <ProductOfferCards />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary/12 via-transparent to-primary/12"
+          aria-hidden
+        />
+        <div className="relative">
+          <ProductOfferCards />
+        </div>
       </section>
 
       {/* Info cards + promo */}
