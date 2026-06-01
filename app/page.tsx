@@ -31,9 +31,9 @@ export default function Home() {
                 <img
                   src="/assets/logos/Logo-transparent.png"
                   alt="Trace-That-Tome logo"
-                  className="h-20 w-20 shrink-0 drop-shadow-md md:h-24 md:w-24"
-                  width={96}
-                  height={96}
+                  className="h-20 w-20 shrink-0 drop-shadow-md md:h-32 md:w-32 lg:h-40 lg:w-40"
+                  width={160}
+                  height={160}
                 />
                 <div className="min-w-0">
                   <p className="text-lg drop-shadow-md [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
