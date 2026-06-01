@@ -49,7 +49,7 @@ export default function Home() {
           </p>
           <div className="mx-auto mt-10 max-w-4xl">
             <YouTubeEmbed
-              videoUrl="https://www.youtube.com/watch?v=3q33r-hgPeg"
+              videoUrl="https://www.youtube.com/watch?v=4mT8ZGsEeOQ"
               title="Trace-That-Tome promo video"
             />
           </div>
