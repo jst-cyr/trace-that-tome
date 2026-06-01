@@ -91,12 +91,12 @@ Default selection is the first theme (`assorted`). Theme selection does **not** 
 
 ### Images
 
-Product photos live under `public/assets/products/{slug}/` as `hero.jpg`, `front.jpg`, `back.jpg`, and `packaging.jpg`.
+Product photos live under `public/assets/products/{slug}/`. Each product has its own set of files; every product includes **`hero.jpg`** for the default image. Other filenames are defined explicitly in `lib/products.ts` (not inferred from the filesystem).
 
 | Field | Use |
 |-------|-----|
 | `imageSrc`, `imageAlt` | **Hero** only—See also card and any place that shows one product image. Path: `/assets/products/{slug}/hero.jpg`. |
-| `galleryImages` | PDP **image gallery** (Amazon-style): large main image + clickable thumbnails. First entry must match hero (`imageSrc` / `imageAlt`). Order: hero → front → back → packaging. |
+| `galleryImages` | PDP **image gallery** (Amazon-style): large main image + clickable thumbnails. Ordered list in catalog data; first entry must match hero (`imageSrc` / `imageAlt`). Count and filenames differ per product (e.g. app bookmark may include theme sample shots and packaging; offline pack may include only hero and back). |
 
 **PDP gallery behavior:** One large main image; a strip of small thumbnails (vertical column left of main on `md+`, horizontal row below main on small screens). Clicking a thumbnail updates the main image and highlights the active thumb. Theme selection does **not** change images.
 

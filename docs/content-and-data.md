@@ -38,7 +38,7 @@ Product {
 | `metaDescription` | Page `<meta description>` |
 | `ctaLabel` | Homepage card button text |
 | `imageSrc`, `imageAlt` | Default **hero** image (See also, any single-image surface); must match `galleryImages[0]` |
-| `galleryImages` | PDP gallery only; ordered hero → front → back → packaging under `/assets/products/{slug}/` |
+| `galleryImages` | PDP gallery only; explicit list per product under `/assets/products/{slug}/`. First entry must be `hero.jpg` and match `imageSrc` / `imageAlt`. Other filenames vary by product. |
 | `slug` | URL segment; must match `app/products/<slug>/` |
 
 ### Editing products

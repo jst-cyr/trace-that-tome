@@ -37,37 +37,51 @@ export type Product = {
   ctaLabel: string;
 };
 
-function productGallery(
-  slug: string,
-  alts: {
-    hero: string;
-    front: string;
-    back: string;
-    packaging: string;
-  }
-): ProductImage[] {
-  const base = `/assets/products/${slug}`;
-  return [
-    { src: `${base}/hero.jpg`, alt: alts.hero },
-    { src: `${base}/front.jpg`, alt: alts.front },
-    { src: `${base}/back.jpg`, alt: alts.back },
-    { src: `${base}/packaging.jpg`, alt: alts.packaging },
-  ];
-}
+const appBookmarkBase = "/assets/products/app-bookmark";
 
-const appBookmarkGallery = productGallery("app-bookmark", {
-  hero: "Trace That Tome app bookmark with tracking tag",
-  front: "Trace That Tome app bookmark, front view",
-  back: "Trace That Tome app bookmark, back view",
-  packaging: "Trace That Tome app bookmark in packaging",
-});
+const appBookmarkGallery: ProductImage[] = [
+  {
+    src: `${appBookmarkBase}/hero.jpg`,
+    alt: "Trace That Tome app bookmark with tracking tag",
+  },
+  {
+    src: `${appBookmarkBase}/assorted.jpg`,
+    alt: "Trace That Tome app bookmark, assorted artwork theme",
+  },
+  {
+    src: `${appBookmarkBase}/butterfly-and-flowers.jpg`,
+    alt: "Trace That Tome app bookmark, butterfly and flowers artwork",
+  },
+  {
+    src: `${appBookmarkBase}/dolphin-and-whale.jpg`,
+    alt: "Trace That Tome app bookmark, dolphin and whale artwork",
+  },
+  {
+    src: `${appBookmarkBase}/back.jpg`,
+    alt: "Trace That Tome app bookmark, back view",
+  },
+  {
+    src: `${appBookmarkBase}/packaging-front.jpg`,
+    alt: "Trace That Tome app bookmark packaging, front",
+  },
+  {
+    src: `${appBookmarkBase}/packaging-back.jpg`,
+    alt: "Trace That Tome app bookmark packaging, back",
+  },
+];
 
-const offlinePackGallery = productGallery("offline-pack", {
-  hero: "Trace That Tome six-bookmark offline pack with remote tracker",
-  front: "Trace That Tome offline bookmark pack, front view",
-  back: "Trace That Tome offline bookmark pack, back view",
-  packaging: "Trace That Tome offline bookmark pack in packaging",
-});
+const offlinePackBase = "/assets/products/offline-pack";
+
+const offlinePackGallery: ProductImage[] = [
+  {
+    src: `${offlinePackBase}/hero.jpg`,
+    alt: "Trace That Tome six-bookmark offline pack with remote tracker",
+  },
+  {
+    src: `${offlinePackBase}/back.jpg`,
+    alt: "Trace That Tome offline bookmark pack, back view",
+  },
+];
 
 export const products: Product[] = [
   {

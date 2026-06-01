@@ -4,8 +4,6 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import type { ProductImage } from "@/lib/products";
 
-const THUMB_LABELS = ["Hero view", "Front view", "Back view", "Packaging"] as const;
-
 type ProductImageGalleryProps = {
   images: ProductImage[];
 };
@@ -55,7 +53,6 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
       >
         {images.map((image, index) => {
           const isActive = index === activeIndex;
-          const thumbLabel = THUMB_LABELS[index] ?? `Image ${index + 1}`;
 
           return (
             <button
@@ -65,7 +62,7 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
               id={`product-gallery-tab-${index}`}
               aria-selected={isActive}
               aria-controls="product-gallery-main"
-              aria-label={thumbLabel}
+              aria-label={`Show image ${index + 1} of ${images.length}: ${image.alt}`}
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActiveIndex(index)}
               className={cn(
