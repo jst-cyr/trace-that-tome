@@ -17,17 +17,17 @@ type RelatedProductCardProps = {
 export function RelatedProductCard({ product }: RelatedProductCardProps) {
   return (
     <Card className="w-full max-w-2xl overflow-hidden border-primary/20 bg-card shadow-lg">
-      <div className="grid sm:grid-cols-[minmax(0,12rem)_1fr] md:grid-cols-[minmax(0,14rem)_1fr]">
-        <figure className="flex items-center justify-center border-b bg-muted/30 p-6 sm:border-b-0 sm:border-r">
+      <div className="grid grid-cols-2 items-stretch">
+        <figure className="relative min-h-[17rem] overflow-hidden border-r">
           {product.imageSrc ? (
             <img
               src={product.imageSrc}
               alt={product.imageAlt}
-              className="h-auto max-h-44 w-full max-w-[10rem] object-contain"
+              className="absolute inset-0 size-full object-cover object-center"
             />
           ) : (
             <div
-              className="flex aspect-square w-full max-w-[10rem] items-center justify-center rounded-xl border border-dashed border-border bg-muted text-center text-xs text-muted-foreground"
+              className="absolute inset-0 flex items-center justify-center bg-muted text-center text-xs text-muted-foreground"
               aria-hidden
             >
               Product image coming soon

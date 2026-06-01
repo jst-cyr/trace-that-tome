@@ -59,7 +59,7 @@ Standard Card composition: `CardHeader`, `CardTitle`, `CardDescription`, `CardCo
 |-----------|------|
 | `ProductOfferCards` | Homepage two-product grid; hero image left, copy and CTA right |
 | `ProductImageGallery` | PDP Amazon-style gallery: main image + clickable thumbnails (client) |
-| `RelatedProductCard` | PDP “See also” sibling product (hero via `imageSrc`) |
+| `RelatedProductCard` | PDP “See also” sibling product; hero image left (half width, `object-cover`, same as offer cards) |
 | `ProductDetailLayout` | Shared PDP shell |
 
 ## Images

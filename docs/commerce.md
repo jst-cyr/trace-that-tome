@@ -51,7 +51,7 @@ flowchart TD
 | Get 6 Offline Bookmarks | Offer card | `/products/offline-pack` | From `product.ctaLabel` |
 | Add to cart | PDP | — | **Disabled**; label “Add to cart” |
 | View all options | PDP | `/#order` | Return to homepage offer section |
-| See also | PDP | `/products/{sibling-slug}` | `RelatedProductCard`: image, title, description, price, `ctaLabel` button |
+| See also | PDP | `/products/{sibling-slug}` | `RelatedProductCard`: hero image (half card, `object-cover`), title, description, price, `ctaLabel` button |
 
 **Do not** use `mailto:` for primary order CTAs unless this spec is updated.
 
