@@ -98,7 +98,7 @@ Product photos live under `public/assets/products/{slug}/`. Each product has its
 | `imageSrc`, `imageAlt` | **Hero** only—See also card and any place that shows one product image. Path: `/assets/products/{slug}/hero.jpg`. |
 | `galleryImages` | PDP **image gallery** (Amazon-style): large main image + clickable thumbnails. Ordered list in catalog data; first entry must match hero (`imageSrc` / `imageAlt`). Count and filenames differ per product (e.g. app bookmark may include theme sample shots and packaging; offline pack may include only hero and back). |
 
-**PDP gallery behavior:** One large main image; a strip of small thumbnails (vertical column left of main on `md+`, horizontal row below main on small screens). Clicking a thumbnail updates the main image and highlights the active thumb. Theme selection does **not** change images.
+**PDP gallery behavior:** One large main image; a strip of small thumbnails (vertical column left of main on `md+`, horizontal row below main on small screens). Clicking a thumbnail updates the main image and highlights the active thumb. **Clicking the main image** opens a lightbox (native `<dialog>`) with a larger view; Escape or backdrop click closes it; prev/next controls when multiple images exist. Theme selection does **not** change images.
 
 If `imageSrc` is omitted or `galleryImages` is empty, show a dashed placeholder (“Product image coming soon”).
 

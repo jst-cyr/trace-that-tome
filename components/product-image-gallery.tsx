@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ProductImage } from "@/lib/products";
 
@@ -10,6 +11,45 @@ type ProductImageGalleryProps = {
 
 export function ProductImageGallery({ images }: ProductImageGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const active = images[activeIndex] ?? images[0];
+  const hasMultiple = images.length > 1;
+
+  const openLightbox = useCallback(() => {
+    dialogRef.current?.showModal();
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    dialogRef.current?.close();
+  }, []);
+
+  const showPrevious = useCallback(() => {
+    setActiveIndex((index) => (index <= 0 ? images.length - 1 : index - 1));
+  }, [images.length]);
+
+  const showNext = useCallback(() => {
+    setActiveIndex((index) => (index >= images.length - 1 ? 0 : index + 1));
+  }, [images.length]);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (!dialog.open) return;
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showPrevious();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showNext();
+      }
+    };
+
+    dialog.addEventListener("keydown", onKeyDown);
+    return () => dialog.removeEventListener("keydown", onKeyDown);
+  }, [showNext, showPrevious]);
 
   if (images.length === 0) {
     return (
@@ -22,8 +62,6 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
     );
   }
 
-  const active = images[activeIndex] ?? images[0];
-
   return (
     <figure
       className="flex w-full flex-col gap-4 md:flex-row md:items-start md:gap-3"
@@ -35,11 +73,18 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
         aria-labelledby={`product-gallery-tab-${activeIndex}`}
         className="order-1 flex h-80 w-full min-w-0 flex-1 items-center justify-center md:order-2 md:h-96"
       >
-        <img
-          src={active.src}
-          alt={active.alt}
-          className="size-full object-contain"
-        />
+        <button
+          type="button"
+          onClick={openLightbox}
+          className="group size-full cursor-zoom-in border-0 bg-transparent p-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          aria-label={`View larger image: ${active.alt}`}
+        >
+          <img
+            src={active.src}
+            alt={active.alt}
+            className="size-full object-contain transition-opacity group-hover:opacity-90"
+          />
+        </button>
       </div>
 
       <p className="sr-only" aria-live="polite" aria-atomic="true">
@@ -81,6 +126,77 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
           );
         })}
       </div>
+
+      <dialog
+        ref={dialogRef}
+        aria-label="Enlarged product image"
+        className="product-image-lightbox fixed inset-0 z-50 m-0 hidden h-full w-full max-h-none max-w-none border-0 bg-transparent p-4 shadow-none open:flex open:items-center open:justify-center sm:p-8"
+        onClick={(event) => {
+          if (event.target === dialogRef.current) {
+            closeLightbox();
+          }
+        }}
+      >
+        <div
+          className="relative flex max-h-full max-w-full flex-col items-center"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className="absolute right-0 top-0 z-10 flex gap-2 sm:-top-2 sm:-right-2">
+            {hasMultiple ? (
+              <>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="icon"
+                  className="rounded-full shadow-md"
+                  aria-label="Previous image"
+                  onClick={showPrevious}
+                >
+                  <span aria-hidden className="text-lg leading-none">
+                    ‹
+                  </span>
+                </Button>
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="icon"
+                  className="rounded-full shadow-md"
+                  aria-label="Next image"
+                  onClick={showNext}
+                >
+                  <span aria-hidden className="text-lg leading-none">
+                    ›
+                  </span>
+                </Button>
+              </>
+            ) : null}
+            <Button
+              type="button"
+              variant="secondary"
+              size="icon"
+              className="rounded-full shadow-md"
+              aria-label="Close enlarged image"
+              onClick={closeLightbox}
+            >
+              <span aria-hidden className="text-lg leading-none">
+                ×
+              </span>
+            </Button>
+          </div>
+
+          <img
+            src={active.src}
+            alt={active.alt}
+            className="max-h-[min(85vh,900px)] max-w-[min(92vw,1100px)] object-contain"
+          />
+
+          {hasMultiple ? (
+            <p className="mt-4 text-center text-sm text-white/90">
+              Image {activeIndex + 1} of {images.length}
+            </p>
+          ) : null}
+        </div>
+      </dialog>
     </figure>
   );
 }

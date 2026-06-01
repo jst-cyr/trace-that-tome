@@ -114,3 +114,8 @@ body {
     font-size: 1.5rem;
   }
 }
+
+/* PDP product image lightbox */
+.product-image-lightbox::backdrop {
+  background: rgb(0 0 0 / 0.85);
+}
