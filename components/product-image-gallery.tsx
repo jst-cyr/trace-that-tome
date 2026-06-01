@@ -26,19 +26,19 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
 
   return (
     <figure
-      className="flex w-full max-w-md flex-col gap-4 md:max-w-none md:flex-row md:items-start md:gap-3"
+      className="flex w-full flex-col gap-4 md:flex-row md:items-start md:gap-3"
       aria-label="Product images"
     >
       <div
         role="tabpanel"
         id="product-gallery-main"
         aria-labelledby={`product-gallery-tab-${activeIndex}`}
-        className="order-1 flex min-h-0 flex-1 items-center justify-center rounded-xl border bg-background p-4 md:order-2 md:min-h-[20rem]"
+        className="order-1 flex h-80 w-full min-w-0 flex-1 items-center justify-center md:order-2 md:h-96"
       >
         <img
           src={active.src}
           alt={active.alt}
-          className="h-auto max-h-80 w-full object-contain"
+          className="size-full object-contain"
         />
       </div>
 

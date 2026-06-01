@@ -25,7 +25,7 @@ export function ProductDetailLayout({ product }: ProductDetailLayoutProps) {
         </p>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:items-start">
-          <div className="flex flex-col items-center rounded-2xl border bg-muted/30 p-6 md:p-8">
+          <div className="min-w-0">
             <ProductImageGallery images={product.galleryImages} />
           </div>
 
